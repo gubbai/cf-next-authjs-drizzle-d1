@@ -3,7 +3,7 @@
 ## Project Structure & Module Organization
 - `app/` hosts the Next.js App Router; `page.tsx` is the default landing view and `app/api/auth/[...nextauth]/route.ts` exposes the Auth.js handler.
 - `lib/` contains database wiring; use `lib/db.ts` for cached D1 clients and adjust tables in `lib/schema/d1.ts` when the Auth.js model changes.
-- Root modules (`auth.ts`, `middleware.ts`) configure session handling across edge routes.
+- Root module `auth.ts` configures session handling across edge routes.
 - Deployment and database configs live beside the root (`wrangler.jsonc`, `drizzle-*.config.ts`, `open-next.config.ts`); static assets belong in `public/`.
 
 ## Build, Test, and Development Commands
